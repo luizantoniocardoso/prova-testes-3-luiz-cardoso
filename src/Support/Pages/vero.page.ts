@@ -37,7 +37,7 @@ export class VeroPage {
     await this.page.fill(VeroElements.messageTextarea, "Mensagem automatizada Playwright.");
     await this.page.check(VeroElements.privacyCheckbox);
     await this.page.locator(VeroElements.submitButton).click();
-
+    console.log('teesteeee')
     const success = this.page.locator(VeroElements.successMessage);
     await expect(success.first()).toBeVisible({ timeout: 15000 });
   }
